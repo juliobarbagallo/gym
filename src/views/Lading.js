@@ -34,7 +34,7 @@ export default function Landing() {
                 <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                   <div >
                     <h1 className="text-white font-semibold text-5xl">
-                    Entrenamiento<span className="text-green-500">personalizado</span>
+                    Entrenamiento <span className="text-green-500">personalizado</span>
                     </h1>
                     <p className="mt-4 text-lg text-gray-300">
                       Mi nombre es John, John Rambo.
