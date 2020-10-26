@@ -19,7 +19,7 @@ export default function Navbar(props) {
                 (props.transparent ? "text-white" : "text-gray-800") +
                 " text-lg font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase"
               }
-              href="#"
+              href="#julio"
             >
               Rambo's web page
             </a>
