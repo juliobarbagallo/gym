@@ -7,7 +7,7 @@ import 'aos/dist/aos.css';
 
 import emailjs from "emailjs-com";
 import{ init } from 'emailjs-com';
-init("user_ESDavqFX9uUsIxThEgxPK");
+init(process.env.REACT_APP_USER);
 
 export default function Landing() {
   
