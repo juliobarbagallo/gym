@@ -108,10 +108,11 @@ swal("Error!", "Algo salio mal el intentar enviar el correo. Contacta al adminis
 ```
 
 ## Resources
-The documentation for the React Landing Page is hosted at <a href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/#/documentation/landing?ref=rlp-tsk-readme" target="_blank">TailWind starter kit.</a>.
-[AOS](https://michalsnik.github.io/aos/)
-[SWAL](https://sweetalert.js.org/)
-[EmailJS](https://www.emailjs.com)
+
+⋅⋅*[TailWind starter Kit](https://www.creative-tim.com/learning-lab/tailwind-starter-kit/#/documentation/landing?ref=rlp-tsk-readme)
+⋅⋅*[AOS](https://michalsnik.github.io/aos/)
+⋅⋅*[SWAL](https://sweetalert.js.org/)
+⋅⋅*[EmailJS](https://www.emailjs.com)
 
 ## Credits
 <a href="https://www.traversymedia.com/" target="_blank">Traversy media</a>
