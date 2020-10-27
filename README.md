@@ -23,12 +23,12 @@ AOS (For animations)
 #### `npm install aos`
 
 Import AOS:
---
+```
 import AOS from 'aos';
 import 'aos/dist/aos.css';
---
+```
 Set AOS parameters:
---
+```
   useEffect(() => {
     AOS.init({
       delay: 200,
@@ -37,27 +37,29 @@ Set AOS parameters:
     });
     AOS.refresh();
   });
---
+```
+
 We are setting the delay, the duration and once attribute for AOS. once: false, means we DON'T want the animation to just happen once, we want to be animated at anytime you scroll down and up again. Set it to true if you don't want this.
   
 Use AOS:
---
+```
 <div className="container relative mx-auto" data-aos="fade-in">
---
-Here we are using AOS to make the text on the Hero section to fade in, that is the div tag which contains the text.
+```
 
+Here we are using AOS to make the text on the Hero section to fade in, that is the div tag which contains the text.
 
 EmailJs (Email service)
 #### `npm install emailjs-com --save`
 
 Import and init Emailjs:
---
+```
 import emailjs from "emailjs-com";
 import{ init } from 'emailjs-com';
 init(process.env.REACT_APP_USER);
---
+```
+
 Make send mail function:
---
+```
 function sendEmail(e) {
     let serviceEmail = process.env.REACT_APP_SERVICE;
     let templateEmail = process.env.REACT_APP_TEMPLATE;
@@ -75,14 +77,14 @@ function sendEmail(e) {
     });
     e.target.reset()
 }
---
+```
 Here we are creating the function that will be called on the submit action from the form button.
 And we are passing it the service, the template and the email parameters to be used by EmailJs API.
 
 Contact form and sendEmail function:
---
+```
 <form onSubmit={sendEmail}>
---
+```
 We are saying that when we click the submit button, it will call sendEmail function with the onSubmit.
 Each input must have the attribute name set, this value is the one that will link our data from the form with the emailjs form.
     
@@ -92,18 +94,18 @@ Swal (Alert notification for email form fucntion)
 #### `npm install sweetalert --save`
 
 Import Swal:
---
+```
 import swal from 'sweetalert';
---
+```
 Using swal:
 If the response from the sendEmail function was successfully, we want the swal alert to show a message to the user to notify that it was ok, so:
---
+```
 swal("Listooo!", "Correo enviado!", "success");
---
+```
 The same if something goes wrong:
---
+```
 swal("Error!", "Algo salio mal el intentar enviar el correo. Contacta al administrador!", "error");
---
+```
 
 ## Resources
 The documentation for the React Landing Page is hosted at <a href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/#/documentation/landing?ref=rlp-tsk-readme" target="_blank">TailWind starter kit.</a>.
