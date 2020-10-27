@@ -110,6 +110,7 @@ swal("Error!", "Algo salio mal el intentar enviar el correo. Contacta al adminis
 ## Resources
 
 [I'm an inline-style link](https://www.google.com)
+
 [I'm an inline-style link](https://www.google.com)
 
 [link text itself]: http://www.reddit.com
