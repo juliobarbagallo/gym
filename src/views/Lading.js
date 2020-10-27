@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
+import Navbar from "components/Navbar.js";
+import Footer from "components/Footer.js";
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Navbar from "components/Navbar.js";
-import Footer from "components/Footer.js";
 
 import emailjs from "emailjs-com";
 import{ init } from 'emailjs-com';
@@ -12,9 +12,13 @@ init("user_ESDavqFX9uUsIxThEgxPK");
 export default function Landing() {
   
   function sendEmail(e) {
+    let serviceEmail = process.env.REACT_APP_SERVICE;
+    let templateEmail = process.env.REACT_APP_TEMPLATE;
+    let userEmail = process.env.REACT_APP_USER;
+    
     e.preventDefault();
 
-    emailjs.sendForm('service_5i0hqls', 'template_xhbhoy8', e.target, 'user_ESDavqFX9uUsIxThEgxPK')
+    emailjs.sendForm(serviceEmail, templateEmail, e.target, userEmail)
     .then((result) => {
         console.log(result.text);
     }, (error) => {
