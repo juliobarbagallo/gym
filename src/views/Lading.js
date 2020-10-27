@@ -1,11 +1,28 @@
 import React, { useEffect } from "react";
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Navbar from "components/Navbar.js";
 import Footer from "components/Footer.js";
 
+import emailjs from "emailjs-com";
+import{ init } from 'emailjs-com';
+init("user_ESDavqFX9uUsIxThEgxPK");
+
 export default function Landing() {
   
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_5i0hqls', 'template_xhbhoy8', e.target, 'user_ESDavqFX9uUsIxThEgxPK')
+    .then((result) => {
+        console.log(result.text);
+    }, (error) => {
+        console.log(error.text);
+    });
+    e.target.reset()
+}
+
   useEffect(() => {
     AOS.init({
       delay: 200,
@@ -292,6 +309,7 @@ export default function Landing() {
             <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
               <div className="w-full lg:w-6/12 px-4">
                 <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300" data-aos="fade-up-right">
+                <form onSubmit={sendEmail}>
                   <div className="flex-auto p-5 lg:p-10 bg-green-500 text-white">
                     <h4 className="text-2xl font-semibold">
                       Trabajamos juntos?
@@ -299,7 +317,9 @@ export default function Landing() {
                     <p className="leading-relaxed mt-1 mb-4 ">
                       Completa el formulario y me voy a estar comunicando con vos.
                     </p>
+                    
                     <div className="relative w-full mb-3 mt-8">
+                    
                       <label
                         className="block uppercase text-xs font-bold mb-2"
                         htmlFor="full-name"
@@ -307,8 +327,9 @@ export default function Landing() {
                         Nombre
                       </label>
                       <input
+                        name="name"
                         type="text"
-                        className="px-3 py-3 placeholder-gray-400 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
+                        className="px-3 py-3 placeholder-gray-400 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full text-black"
                         placeholder="Tu nombre completo"
                         style={{ transition: "all .15s ease" }}
                       />
@@ -322,9 +343,10 @@ export default function Landing() {
                         Email
                       </label>
                       <input
+                        name="email"
                         type="email"
-                        className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
-                        placeholder="Email"
+                        className="text-black px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
+                        placeholder="Tu email"
                         style={{ transition: "all .15s ease" }}
                       />
                     </div>
@@ -337,22 +359,29 @@ export default function Landing() {
                         Mensaje
                       </label>
                       <textarea
+                        name="message"
                         rows="4"
                         cols="80"
-                        className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
+                        className="text-black px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
                         placeholder="Escribime tu mensaje..."
                       />
                     </div>
                     <div className="text-center mt-6">
-                      <button
+                    <input type="submit" className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1" value="Enviar"
+                      style={{ transition: "all .15s ease" }}
+                    >
+                      
+                    </input>
+                      {/* <button
                         className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
                         type="button"
                         style={{ transition: "all .15s ease" }}
                       >
                         Enviar
-                      </button>
+                      </button> */}
                     </div>
                   </div>
+                  </form>
                 </div>
               </div>
             </div>
