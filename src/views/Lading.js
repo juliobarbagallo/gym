@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import Navbar from "components/Navbar.js";
 import Footer from "components/Footer.js";
 
+import swal from 'sweetalert';
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -21,8 +23,10 @@ export default function Landing() {
     emailjs.sendForm(serviceEmail, templateEmail, e.target, userEmail)
     .then((result) => {
         console.log(result.text);
+        swal("Listooo!", "Correo enviado!", "success");
     }, (error) => {
         console.log(error.text);
+        swal("Error!", "Algo salio mal el intentar enviar el correo. Contacta al administrador!", "error");
     });
     e.target.reset()
 }
