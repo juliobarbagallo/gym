@@ -116,8 +116,11 @@ swal("Error!", "Algo salio mal el intentar enviar el correo. Contacta al adminis
 [link text itself]: http://www.reddit.com
 
 ⋅⋅*[TailWind starter Kit](https://www.creative-tim.com/learning-lab/tailwind-starter-kit/#/documentation/landing?ref=rlp-tsk-readme)
+
 ⋅⋅*[AOS](https://michalsnik.github.io/aos/)
+
 ⋅⋅*[SWAL](https://sweetalert.js.org/)
+
 ⋅⋅*[EmailJS](https://www.emailjs.com)
 
 ## Credits
