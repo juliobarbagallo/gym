@@ -37,8 +37,8 @@ Set AOS parameters:
     });
     AOS.refresh();
   });
-  --
-  We are setting the delay, the duration and once attribute for AOS. once: false, means we DON'T want the animation to just happen once, we want to be animated at anytime you scroll down and up again. Set it to true if you don't want this.
+--
+We are setting the delay, the duration and once attribute for AOS. once: false, means we DON'T want the animation to just happen once, we want to be animated at anytime you scroll down and up again. Set it to true if you don't want this.
   
 Use AOS:
 --
