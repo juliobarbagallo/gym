@@ -5,9 +5,9 @@
 ## Table of Contents
 
 * [Description](#Description)
-* [Resources](#resources)
+* [Resources](#Resources)
 * [Credits](#Credits)
-* [Contact](#contact)
+* [Contact](#Contact)
 * [File Structure](#file-structure)
 
 ## Description
@@ -119,7 +119,17 @@ swal("Error!", "Algo salio mal el intentar enviar el correo. Contacta al adminis
 [EmailJS](https://www.emailjs.com)
 
 ## Credits
+
 <a href="https://www.traversymedia.com/" target="_blank">Traversy media</a>
+
+## Contact
+
+If you want to contact me because you want me to explain some of my steps, try to fix something, and idea, or you just want to use it and don't know how to do it. You can reach me at:
+
+Si no entendiste algo de lo que leiste y queres contactarte, ya sea para que agregue algo,o arreglar algo, podes contactarme aca:
+
+# <a href="https://twitter.com/Julitobar" target="_blank">![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)</a>
+
 
 ## File Structure
 Within the download you'll find the following directories and files:
